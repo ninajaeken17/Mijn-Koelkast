@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.fridge-container {
+    position: relative;
+    display: inline-block;
+}
+
+#fridge {
+    width: 350px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#fridge:hover {
+    transform: scale(1.03);
+}
+
+.shelf {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    display: none; /* verborgen wanneer koelkast gesloten is */
+}
+
+/* Posities van de producten in de koelkast */
+#apple {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+    width: 90px;
+    cursor: pointer;
+}
+
+#yoghurt {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    width: 90px;
+    cursor: pointer;
+}
+
+#apple:hover,
+#yoghurt:hover {
+    transform: scale(1.1);
+}
