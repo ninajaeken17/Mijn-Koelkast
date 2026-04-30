@@ -180,3 +180,21 @@ body {
         padding: 24px;
     }
 }
+.product-page .product-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 25px auto;
+    border-radius: 18px;
+}
+
+.product-page .graph-image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 18px;
+}
