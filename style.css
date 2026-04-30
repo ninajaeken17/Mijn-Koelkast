@@ -1,16 +1,31 @@
 body {
     margin: 0;
+    min-height: 100vh;
     font-family: "Inter", Arial, sans-serif;
 
     background: linear-gradient(
-        135deg,
-        #e8f5e9 0%,   /* heel licht groen */
-        #fdf2f2 100%  /* heel licht rood */
+    135deg,
+    #d9f2dd 0%,
+    #ffe1e1 100%
     );
+    background-attachment: fixed;
+    color: #1f2937;
+}
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     text-align: center;
-    padding-top: 60px;
-    color: #1f2937;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .fridge-container {
@@ -75,8 +90,15 @@ body {
 .yoghurt-page {
     background: linear-gradient(
         to bottom,
-        #e8f5e9 0%,
-        #fdf2f2 100%
+        #d9f2dd 0%,
+        #ffe1e1 100%
+    );
+}
+.appel-page {
+    background: linear-gradient(
+        to bottom,
+        #d9f2dd 0%,
+        #ffe1e1 100%
     );
 }
 
