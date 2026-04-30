@@ -1,23 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #e8f5e9 0%,   /* heel licht groen */
+        #fdf2f2 100%  /* heel licht rood */
+    );
+
     text-align: center;
-    padding-top: 40px;
+    padding-top: 60px;
+    color: #1f2937;
 }
 
 .fridge-container {
     position: relative;
     display: inline-block;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 #fridge {
     width: 350px;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 12px;
 }
 
 #fridge:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .shelf {
@@ -35,6 +49,7 @@ body {
     left: 90px;
     width: 90px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 #yoghurt {
@@ -43,6 +58,7 @@ body {
     left: 50px;
     width: 90px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 #apple:hover,
