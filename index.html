@@ -6,20 +6,20 @@
     <title>Interactieve Koelkast</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
 
-    <h1>Mijn Interactieve Koelkast</h1>
+    <main class="home-content">
+        <h1>Mijn Interactieve Koelkast</h1>
 
-    <div class="fridge-container">
-        <!-- Koelkast afbeelding -->
-        <img id="fridge" src="koelkast_gesloten.png" alt="Koelkast">
+        <div class="fridge-container">
+            <img id="fridge" src="koelkast_gesloten.png" alt="Koelkast">
 
-        <!-- Producten op de schappen -->
-        <div id="shelves" class="shelf">
-            <img id="apple" src="foto_appel.png" alt="Appel" onclick="openProduct('appel')">
-            <img id="yoghurt" src="magere_yoghurt.jpg" alt="Magere Yoghurt" onclick="openProduct('yoghurt')">
+            <div id="shelves" class="shelf">
+                <img id="apple" src="foto_appel.png" alt="Appel" onclick="openProduct('appel')">
+                <img id="yoghurt" src="magere_yoghurt.jpg" alt="Magere Yoghurt" onclick="openProduct('yoghurt')">
+            </div>
         </div>
-    </div>
+    </main>
 
     <!-- Belangrijk: script onderaan + defer als je het in <head> zou zetten -->
     <script src="script.js"></script>
