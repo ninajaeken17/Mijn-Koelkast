@@ -71,20 +71,20 @@ body {
 }
 
 #apple {
-    top: 30%;
+    top: 20%;
     left: 70%;
     width: 20%;
 }
 
 #melk {
     top: 28%;
-    left: 43%;
-    width: 9%;
+    left: 40%;
+    width: 15%;
 }
 
 #yoghurt {
-    top: 48%;
-    left: 58%;
+    top: 42%;
+    left: 38%;
     width: 24%;
 }
 
@@ -95,8 +95,8 @@ body {
 }
 
 #gehakt {
-    top: 79%;
-    left: 55%;
+    top: 71%;
+    left: 25%;
     width: 22%;
 }
 
