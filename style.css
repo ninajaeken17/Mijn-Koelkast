@@ -134,7 +134,15 @@ body {
         #ffe1e1 100%
     );
 }
-
+.melk-page,
+.zalm-page,
+.gehakt-page {
+    background: linear-gradient(
+        to bottom,
+        #d9f2dd 0%,
+        #ffe1e1 100%
+    );
+}
 /* Tekst blijft mooi in het midden */
 .content {
     max-width: 760px;
