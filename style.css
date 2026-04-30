@@ -56,46 +56,37 @@ body {
 /* Posities van de producten in de koelkast */
 #apple {
     position: absolute;
-    top: 120px;
-    left: 90px;
-    width: 90px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    top: 110px;
+    left: 180px;   /* pas dit aan tot het klopt */
+    width: 80px;
 }
 
 #yoghurt {
     position: absolute;
-    top: 250px;
-    left: 50px;
+    top: 240px;
+    left: 120px;
     width: 90px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
 }
+
 #melk {
     position: absolute;
-    top: 115px;
-    left: 190px;
-    width: 80px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    top: 110px;
+    left: 260px;
+    width: 60px;
 }
 
 #zalm {
     position: absolute;
-    top: 230px;
-    left: 155px;
-    width: 95px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    top: 240px;
+    left: 250px;
+    width: 90px;
 }
 
 #gehakt {
     position: absolute;
     top: 320px;
-    left: 115px;
-    width: 95px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    left: 200px;
+    width: 90px;
 }
 
 #apple:hover,
