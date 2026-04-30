@@ -1,142 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
     font-family: "Inter", Arial, sans-serif;
-
-    background: linear-gradient(
-    135deg,
-    #d9f2dd 0%,
-    #ffe1e1 100%
-    );
+    background: linear-gradient(135deg, #d9f2dd 0%, #ffe1e1 100%);
     background-attachment: fixed;
     color: #1f2937;
 }
+
+/* Hoofdpagina */
 .home-page {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     padding: 40px 20px;
-    box-sizing: border-box;
 }
 
 .home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+.home-content h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    margin: 0 0 35px;
 }
 
 .fridge-container {
-    position: relative;   /* SUPER belangrijk */
+    position: relative;
     display: inline-block;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 28px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
 
 #fridge {
-    width: 350px;
+    display: block;
+    width: min(72vw, 620px);
+    border-radius: 14px;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border-radius: 12px;
+    transition: transform 0.25s ease;
 }
 
 #fridge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
 }
 
+/* Producten in de koelkast */
 .shelf {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;          /* zelfde breedte als koelkast */
-    height: 100%;
+    inset: 28px;
     display: none;
 }
 
-/* Posities van de producten in de koelkast */
-#apple {
+.shelf img {
     position: absolute;
-    top: 110px;
-    left: 180px;   /* pas dit aan tot het klopt */
-    width: 80px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform: translate(-50%, -50%);
 }
 
-#yoghurt {
-    position: absolute;
-    top: 240px;
-    left: 120px;
-    width: 90px;
+.shelf img:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+#apple {
+    top: 30%;
+    left: 70%;
+    width: 20%;
 }
 
 #melk {
-    position: absolute;
-    top: 110px;
-    left: 260px;
-    width: 60px;
+    top: 28%;
+    left: 43%;
+    width: 9%;
+}
+
+#yoghurt {
+    top: 48%;
+    left: 58%;
+    width: 24%;
 }
 
 #zalm {
-    position: absolute;
-    top: 240px;
-    left: 250px;
-    width: 90px;
+    top: 61%;
+    left: 56%;
+    width: 24%;
 }
 
 #gehakt {
-    position: absolute;
-    top: 320px;
-    left: 200px;
-    width: 90px;
+    top: 79%;
+    left: 55%;
+    width: 22%;
 }
 
-#apple:hover,
-#yoghurt:hover,
-#melk:hover,
-#zalm:hover,
-#gehakt:hover {
-    transform: scale(1.1);
-}
-#apple:hover,
-#yoghurt:hover {
-    transform: scale(1.1);
-}
 /* Productpagina's */
 .product-page {
     padding: 60px 20px;
     text-align: left;
+    background: linear-gradient(to bottom, #d9f2dd 0%, #ffe1e1 100%);
+    background-attachment: fixed;
 }
 
-/* Yoghurtpagina: groen bovenaan, rood onderaan */
-.yoghurt-page {
-    background: linear-gradient(
-        to bottom,
-        #d9f2dd 0%,
-        #ffe1e1 100%
-    );
-}
-.appel-page {
-    background: linear-gradient(
-        to bottom,
-        #d9f2dd 0%,
-        #ffe1e1 100%
-    );
-}
-.melk-page,
-.zalm-page,
-.gehakt-page {
-    background: linear-gradient(
-        to bottom,
-        #d9f2dd 0%,
-        #ffe1e1 100%
-    );
-}
-/* Tekst blijft mooi in het midden */
 .content {
     max-width: 760px;
     margin: 0 auto;
     padding: 36px;
-
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.88);
     border-radius: 24px;
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
 }
@@ -183,4 +159,24 @@ body {
 
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Kleinere schermen */
+@media (max-width: 600px) {
+    .fridge-container {
+        padding: 18px;
+        border-radius: 22px;
+    }
+
+    .shelf {
+        inset: 18px;
+    }
+
+    #fridge {
+        width: 86vw;
+    }
+
+    .content {
+        padding: 24px;
+    }
 }
