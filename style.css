@@ -75,7 +75,40 @@ body {
     cursor: pointer;
     transition: transform 0.2s ease;
 }
+#melk {
+    position: absolute;
+    top: 115px;
+    left: 190px;
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
+#zalm {
+    position: absolute;
+    top: 230px;
+    left: 155px;
+    width: 95px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#gehakt {
+    position: absolute;
+    top: 320px;
+    left: 115px;
+    width: 95px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#apple:hover,
+#yoghurt:hover,
+#melk:hover,
+#zalm:hover,
+#gehakt:hover {
+    transform: scale(1.1);
+}
 #apple:hover,
 #yoghurt:hover {
     transform: scale(1.1);
