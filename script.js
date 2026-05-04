@@ -25,12 +25,15 @@ const video = document.getElementById("timelapseVideo");
 const slider = document.getElementById("timeSlider");
 
 if (video && slider) {
-    video.pause();
     video.controls = false;
+    video.pause();
+
+    video.addEventListener("loadedmetadata", function () {
+        slider.max = video.duration;
+        slider.value = 0;
+    });
 
     slider.addEventListener("input", function () {
-        if (video.duration) {
-            video.currentTime = (slider.value / 100) * video.duration;
-        }
+        video.currentTime = slider.value;
     });
 }
