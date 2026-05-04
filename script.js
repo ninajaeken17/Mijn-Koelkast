@@ -5,15 +5,15 @@ let isOpen = false;
 
 if (fridge && shelves) {
     fridge.addEventListener("click", function () {
-        if (isOpen === false) {
-            fridge.src = "koelkast_open.jpg";
-            shelves.style.display = "block";
-            isOpen = true;
-        } else {
-            fridge.src = "koelkast_gesloten.png";
-            shelves.style.display = "none";
-            isOpen = false;
-        }
+    if (isOpen === false) {
+        fridge.src = "koelkast_open.jpg";
+        shelves.style.display = "block";
+        isOpen = true;
+    } else {
+        fridge.src = "koelkast_gesloten.png";
+        shelves.style.display = "none";
+        isOpen = false;
+    }
     });
 }
 
