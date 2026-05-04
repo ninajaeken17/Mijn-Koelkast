@@ -13,7 +13,35 @@ fridge.addEventListener("click", () => {
         isOpen = false;
     }
 });
+const video = document.getElementById("timelapseVideo");
+const slider = document.getElementById("timeSlider");
 
+if (video && slider) {
+    video.pause();
+    video.controls = false;
+
+    slider.addEventListener("input", () => {
+        const percentage = slider.value / 100;
+
+        if (video.duration) {
+            video.currentTime = percentage * video.duration;
+        }
+    });
+
+    // optioneel: kleur dynamisch aanpassen
+    slider.addEventListener("input", () => {
+        const t = slider.value;
+    const q = quality(t);
+
+    // kleur bepalen
+    let color;
+    if (q > 0.6) color = "#22c55e";
+    else if (q > 0.3) color = "#eab308";
+    else color = "#ef4444";
+
+    slider.style.background = `linear-gradient(to right, ${color}, #ef4444)`;
+    });
+}
 function openProduct(product) {
     window.location.href = `product_${product}.html`;
 }
