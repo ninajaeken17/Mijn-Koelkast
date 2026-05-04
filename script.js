@@ -30,9 +30,10 @@ if (video && slider) {
     });
 
     slider.addEventListener("input", function () {
-        if (video.duration) {
-            const percentage = slider.value / 100;
-            video.currentTime = percentage * video.duration * 0.25;
-        }
+    if (video.duration) {
+        const quarter = video.duration * 0.25;   // eerste 25%
+        const percentage = slider.value / 100;
+
+        video.currentTime = percentage * quarter;
+    }
     });
-}
