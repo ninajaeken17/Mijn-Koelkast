@@ -20,10 +20,10 @@ if (video && slider) {
     video.pause();
     video.controls = false;
 
-    slider.addEventListener("input", () => {
-        const percentage = slider.value / 100;
-
-        if (video.duration) {
+    // Wacht tot metadata geladen is (BELANGRIJK)
+    video.addEventListener("loadedmetadata", () => {
+        slider.addEventListener("input", () => {
+            const percentage = slider.value / 100;
             video.currentTime = percentage * video.duration;
         }
     });
