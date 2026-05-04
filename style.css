@@ -160,7 +160,60 @@ body {
 .back-link:hover {
     text-decoration: underline;
 }
+.timelapse-section {
+    margin-top: 50px;
+}
 
+.video-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+/* SLIDER */
+#timeSlider {
+    width: 100%;
+    margin-top: 10px;
+
+    appearance: none;
+    height: 10px;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        to right,
+        #22c55e,
+        #eab308,
+        #ef4444
+    );
+}
+
+/* Slider bolletje */
+#timeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #555;
+}
 /* Kleinere schermen */
 @media (max-width: 600px) {
     .fridge-container {
