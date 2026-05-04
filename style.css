@@ -251,3 +251,10 @@ video {
     margin: 25px auto;
     border-radius: 18px;
 }
+.shelf {
+    pointer-events: none;
+}
+
+.shelf img {
+    pointer-events: auto;
+}
