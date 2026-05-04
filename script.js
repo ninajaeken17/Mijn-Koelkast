@@ -29,11 +29,15 @@ if (video && slider) {
     video.pause();
 
     video.addEventListener("loadedmetadata", function () {
-        slider.max = video.duration;
+        slider.min = 0;
+        slider.max = 100;
         slider.value = 0;
     });
 
     slider.addEventListener("input", function () {
-        video.currentTime = slider.value;
+        if (video.duration) {
+            const percentage = slider.value / 100;
+            video.currentTime = percentage * video.duration * 0.25;
+        }
     });
 }
