@@ -1,12 +1,11 @@
-// Koelkast openen/sluiten
 const fridge = document.getElementById("fridge");
 const shelves = document.getElementById("shelves");
 
-if (fridge && shelves) {
-    let isOpen = false;
+let isOpen = false;
 
-    fridge.addEventListener("click", () => {
-        if (!isOpen) {
+if (fridge && shelves) {
+    fridge.addEventListener("click", function () {
+        if (isOpen === false) {
             fridge.src = "koelkast_open.jpg";
             shelves.style.display = "block";
             isOpen = true;
@@ -18,12 +17,10 @@ if (fridge && shelves) {
     });
 }
 
-// Product openen
 function openProduct(product) {
-    window.location.href = `product_${product}.html`;
+    window.location.href = "product_" + product + ".html";
 }
 
-// Video-slider op productpagina
 const video = document.getElementById("timelapseVideo");
 const slider = document.getElementById("timeSlider");
 
@@ -31,7 +28,7 @@ if (video && slider) {
     video.pause();
     video.controls = false;
 
-    slider.addEventListener("input", () => {
+    slider.addEventListener("input", function () {
         if (video.duration) {
             video.currentTime = (slider.value / 100) * video.duration;
         }
